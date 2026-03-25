@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+:root {
+    scroll-behavior: smooth;
+    font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+
+    padding: 2rem;
+    border-bottom: 0.2rem solid black;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+header img {
+    height: 150px;
+    margin-top: -40px;
+    margin-bottom: -30px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+section {
+    background-color: white;
+    color: black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+section:nth-child(even) {
+    background-color: black;
+    color: white;
+}
+
+.image {
+    padding: 0;
+    max-height: calc(100vh - 10rem);
+}
+
+.card {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    border-radius: 1rem;
+    border: 0.1rem solid black;
+    box-shadow: 0.1rem 0.1rem black;
+    padding: 0.5em;
+    font-size: 1rem;
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card:hover {
+    background-color: black;
+    color: white;
+}
+
+#content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content:  flex-start;
+}
+
+p {
+    max-width: 45ch;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
