@@ -2,7 +2,6 @@ import { createQuoteSection, createListSection } from "./section.js";
 
 function createAbout() {
     const container = document.createElement('div');
-    container.classList.add('column');
 
     container.appendChild(createQuoteSection(
         'About Us',

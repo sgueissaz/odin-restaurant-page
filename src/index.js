@@ -6,10 +6,10 @@ import { createMenu } from './pages/menu.js';
 import { createAbout } from './pages/about.js';
 import { createContact } from './pages/contact.js';
 
+const header = document.querySelector('header');
 const content = document.getElementById('content');
-const nav = document.querySelector('nav');
 
-nav.addEventListener('click', e => {
+header.addEventListener('click', e => {
     const id = e.target.id;
     if (id === undefined || id === '') {
         return;
@@ -34,4 +34,16 @@ nav.addEventListener('click', e => {
     }
 })
 
-content.appendChild(createHero());``
+window.addEventListener('resize', () => {
+  document.documentElement.style.setProperty(
+    '--header-height',
+    header.offsetHeight + 'px'
+  );
+});
+
+document.documentElement.style.setProperty(
+  '--header-height',
+  header.offsetHeight + 'px'
+);
+
+content.appendChild(createHero());

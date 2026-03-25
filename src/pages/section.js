@@ -62,7 +62,6 @@ function createListOfListSection(title, ...items) {
 
 function createImageSection(img) {
     const section = document.createElement('section');
-    section.classList.add('image');
     section.appendChild(img);
 
     return section;

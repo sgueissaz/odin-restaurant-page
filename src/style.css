@@ -6,66 +6,29 @@
 }
 
 :root {
-    scroll-behavior: smooth;
     font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 header {
     position: sticky;
     top: 0;
-    z-index: 100;
+
     background-color: white;
-
-    padding: 2rem;
-    border-bottom: 0.2rem solid black;
-
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 0.2rem solid black;
+    gap: 0.5rem;
 }
 
 header img {
-    height: 150px;
-    margin-top: -40px;
-    margin-bottom: -30px;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-section {
-    background-color: white;
-    color: black;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-section:nth-child(even) {
-    background-color: black;
-    color: white;
-}
-
-.image {
-    padding: 0;
-    max-height: calc(100vh - 10rem);
+    height: 2rem;
 }
 
 .card {
@@ -78,12 +41,6 @@ section:nth-child(even) {
     padding: 0.5em;
     font-size: 1rem;
     font-weight: bold;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
 }
 
 .card:hover {
@@ -91,11 +48,42 @@ section:nth-child(even) {
     color: white;
 }
 
+nav {
+    display: flex;
+    gap: 0.5rem;
+}
+
 #content {
-    flex: 1;
+    height: calc(100dvh - var(--header-height));
     display: flex;
     flex-direction: column;
-    justify-content:  flex-start;
+}
+
+#content>div {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    flex: 1;
+
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 4rem 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+section:nth-child(even) {
+    background-color: black;
+    color: white;
 }
 
 p {
@@ -104,9 +92,18 @@ p {
 
 ul {
     list-style: none;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+}
+
+
+
+@media (max-width: 600px) {
+    header {
+        justify-content: center;
+    }
 }
